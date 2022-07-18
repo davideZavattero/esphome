@@ -115,6 +115,7 @@ class WaveshareEPaperTypeA : public WaveshareEPaper {
 
 enum WaveshareEPaperTypeBModel {
   WAVESHARE_EPAPER_2_7_IN = 0,
+  WAVESHARE_EPAPER_2_9_IN_B,
   WAVESHARE_EPAPER_4_2_IN,
   WAVESHARE_EPAPER_4_2_IN_B,
   WAVESHARE_EPAPER_7_5_IN,

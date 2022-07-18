@@ -540,13 +540,20 @@ void HOT WaveshareEPaper2P9InB::display() {
   this->end_data_();
   delay(2);
 
-  // COMMAND DATA START TRANSMISSION 2 (RED data)
+  // // COMMAND DATA START TRANSMISSION 2 (RED data)
+  // this->command(0x13);
+  // delay(2);
+  // this->start_data_();
+  // for (int i = 0; i < this->get_buffer_length_(); i++)
+  //   this->write_byte(0x00);
+  // this->end_data_();
+  // delay(2);
+   // COMMAND DATA START TRANSMISSION 2 (RED data)
   this->command(0x13);
-  delay(2);
   this->start_data_();
-  for (int i = 0; i < this->get_buffer_length_(); i++)
-    this->write_byte(0x00);
+  this->write_array((this->buffer_+buffer_length), buffer_length);
   this->end_data_();
+  App.feed_wdt();
   delay(2);
 
   // COMMAND DISPLAY REFRESH
